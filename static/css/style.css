@@ -1,0 +1,80 @@
+/* centre the main content area */
+main {
+    max-width: 729px;
+    margin: auto;
+}
+
+/* page headings */
+h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+.font1 {
+    font-family: Arial, Helvetica, serif;
+}
+
+/* nav links */
+nav a {
+    border:solid;
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+nav {
+    text-align: center;
+}
+
+/* tables */
+table {
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 0px 0px;
+}
+
+td, th {
+    border: thin;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* forms */
+form {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-gap: 1em 0.5em;
+}
+
+label {
+    grid-column: 1 / 2;
+    text-align: right;
+}
+
+input, button, select, textarea {
+    grid-column: 2 / 3;
+}
+
+textarea {
+    height: 4em;
+    resize: vertical;
+}
+
+/* colours */
+th, a.nav, legend, label {
+    color: darkslategray;
+}
+
+h1, button {
+    background-color: darkslategrey;
+    color: white;
+}
+
+td, th {
+    border-color: darkslategrey;
+}
