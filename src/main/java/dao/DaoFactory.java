@@ -21,8 +21,8 @@ public class DaoFactory {
      *@return The Product DAO.
      */
     public static ProductDAO getProductDAO(){
-        return JdbiDaoFactory.getProductDAO();
-        //return new ProductCollectionsDAO();
+        //return JdbiDaoFactory.getProductDAO();
+        return new ProductCollectionsDAO();
     }
     
 }
