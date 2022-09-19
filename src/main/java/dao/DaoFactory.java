@@ -13,8 +13,8 @@ public class DaoFactory {
      *@return The Customer DAO.
      */
     public static CustomerDAO getCustomerDAO() {
-        return JdbiDaoFactory.getCustomerDAO();
-        //return new CustomerCollectionsDAO();
+        //return JdbiDaoFactory.getCustomerDAO();
+        return new CustomerCollectionsDAO();
     }
     
     /** Returns the ProductDAO object.

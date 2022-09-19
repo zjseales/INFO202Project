@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js/external/vue.global.js"></script>
+        <script src="js/external/vuex.global.js"></script>
+        <script src="js/external/vuex-persistedstate.js"></script>
+        <script src="js/external/axios.js"></script>
+        <link rel="stylesheet" href="css/style.css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Login page</title>
+    </head>
+    
+    <body>
+        <main>
+            <navmen></navmen>
+            
+            <h1 class="font1">Sign In</h1>
+            
+            <fieldset>
+			<legend>Enter Login details</legend>
+
+			<form @submit.prevent="login(username)">
+                                       
+                            <label>Username:</label><input type="text" v-model="username"/>
+                            <label>Password:</label><input type="password" v-model="password"/>
+            
+                            <button type="submit">Sign-in</button>
+
+			</form>
+
+            </fieldset>
+            
+            <a class="nav" href="index.html">Back to Home</a>
+
+        </main>
+        
+        <script type="module" src="js/sign-in.js"></script>
+        
+    </body>
+</html>

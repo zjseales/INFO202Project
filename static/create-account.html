@@ -11,7 +11,7 @@
     </head>
 	<body>
             <main>
-                <navmen><navmen>
+                <navmen></navmen>
                         
                 <h1 class="font1">Create a new account</h1>
 
@@ -19,13 +19,13 @@
 
 		<legend>Customer Details</legend>
 
-		<form action="create-account" method="POST">
-                    <label>First Name:</label><input type="text" name="firstName"/>
-                    <label>Surname:</label><input type="text" name="surname"/>
-                    <label>Username:</label><input type="text" name="username"/>
-                    <label>Password:</label><input type="password" name="password"/>
-                    <label>Email Address:</label><input type="email" name="emailAddress"/>
-                    <label>Shipping Address:</label><textarea type="text" name="shippingAddress"></textarea>    
+		<form @submit.prevent="createAccount()">
+                    <label>First Name:</label><input type="text" v-model="customer.firstName"/>
+                    <label>Surname:</label><input type="text" v-model="customer.surname"/>
+                    <label>Username:</label><input type="text" v-model="customer.username"/>
+                    <label>Password:</label><input type="password" v-model="customer.password"/>
+                    <label>Email Address:</label><input type="email" v-model="customer.emailAddress"/>
+                    <label>Shipping Address:</label><textarea type="text" v-model="customer.shippingAddress"></textarea>    
             
                     <button type="submit">Create Account</button>
 		</form>
@@ -35,5 +35,8 @@
             <a class="nav" href="index.html">Back to Home</a>
 
         </main>
+            
+            <script type="module" src="js/create-account.js"></script>
+            
     </body>
 </html>
