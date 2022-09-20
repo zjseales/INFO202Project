@@ -58,6 +58,11 @@ const app = Vue.createApp({
                 alert("An error occurred - check the console for details.");
             });
 	},
+        
+        buyProduct(product) {
+            dataStore.commit("selectProduct", product);
+            window.location = "view-product.html";
+        }
     },
 
     // other modules
@@ -72,8 +77,8 @@ import { navigationMenu } from './nav-menu.js';
 // register the navigation menu under the <navmen> tag
 app.component('navmen', navigationMenu);
 
-import { sessionStore } from './session-store.js';
-app.use(sessionStore);  
+import { dataStore } from './data-store.js';
+app.use(dataStore);  
 
 // mount the page - this needs to be the last line in the file
 app.mount("main");

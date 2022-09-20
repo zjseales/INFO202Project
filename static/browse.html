@@ -35,7 +35,7 @@
                 <td>{{product.listPrice}}</td>
                 <td>{{product.quantityInStock}}</td>
                 
-		<td><form @submit.prevent="addToCart(product)"><button>Buy</button></form>
+		<td><form @click.prevent="buyProduct(product)"><button>Buy</button></form>
                 </td>
             </tr>
          </tbody>
