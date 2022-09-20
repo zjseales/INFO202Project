@@ -2,7 +2,6 @@ package web;
 
 import dao.CustomerDAO;
 import dao.DaoFactory;
-import dao.ProductCollectionsDAO;
 import dao.ProductDAO;
 import domain.Product;
 import io.jooby.Jooby;

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js/external/vue.global.js"></script>
+        <script src="js/external/vuex.global.js"></script>
+        <script src="js/external/vuex-persistedstate.js"></script>
+        <script src="js/external/axios.js"></script>
+        <title>Browse Products Page</title>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    
+    <body>
+        <main>
+           <navmen></navmen>
+                        
+            <h1 class="font1">Products</h1>
+            
+            <div class = "categories">
+                <button @click.prevent="getProducts()">All</button>
+                <button @click.prevent="filterByCategory(category)" v-for="category in categories">{{category}}</button>
+            </div>
+            
+            <table>
+         <thead>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Available</th>
+              </tr>
+         </thead>
+         <tbody>
+            <tr v-for="product in products">
+                <td>{{product.name}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.listPrice}}</td>
+                <td>{{product.quantityInStock}}</td>
+                
+		<td><form @submit.prevent="addToCart(product)"><button>Buy</button></form>
+                </td>
+            </tr>
+         </tbody>
+    </table>
+
+    <a class="nav" href="index.html">Return to home</a>
+            
+        </main>
+        
+        <script type="module" src="js/browse.js"></script>
+        
+    </body>
+    
+</html>
