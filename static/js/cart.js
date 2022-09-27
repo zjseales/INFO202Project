@@ -39,11 +39,12 @@ const app = Vue.createApp({
     methods: {
         // comma separated function declarations
         
-        // add item to cart
+        // add item to cart and redirect back to store
         addToCart(product, quantity){
             if (quantity <= product.quantityInStock && quantity > 0){
                 dataStore.commit("addItem", new SaleItem(product, quantity));
-            } else {
+                window.location = 'browse.html';
+            } else {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
                 alert("Amount being purchased must be a positive number\nless than, or equal to, the Quantity of Stock");
             }
         }
