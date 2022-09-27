@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script src="js/external/vue.global.js"></script>
+        <script src="js/external/vuex.global.js"></script>
+        <script src="js/external/vuex-persistedstate.js"></script>
+        <script src="js/external/axios.js"></script>
+        <title>View Cart Page</title>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+        <main>
+            <navmen></navmen>
+           
+            <table>
+                <thead>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    </tr>
+         </thead>
+         <tbody>
+            <tr v-for="item in items">
+                <td>{{item.name}}</td>
+                <td>{{item.prive}</td>
+                <td>{{item.quantity}}</td>
+                <td>{{item.total}}</td>
+            </tr>
+         </tbody>
+    </table>
+            
+        </main>
+        
+        <script type="module" src="js/cart.js"></script>
+        
+    </body>
+</html>

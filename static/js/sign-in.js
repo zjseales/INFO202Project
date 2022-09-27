@@ -39,7 +39,7 @@ const app = Vue.createApp({
 // other component imports go here
 // 
 // import the navigation menu
-import { navigationMenu } from './nav-menu.js';
+import { navigationMenu } from './navigation-menu.js';
 // register the navigation menu under the <navmen> tag
 app.component('navmen', navigationMenu);
 
