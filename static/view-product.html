@@ -13,19 +13,17 @@
            <navmen></navmen>
                         
             <h1 class="font1">Purchase</h1>
-            
-            <fieldset>
-                <legend>Product Details</legend>
                 
-                <form>
-                
+                <form @submit.prevent="addToCart(product, quantity)">
                     <label>ID:</label>{{product.productId}}
                     <label>Name:</label>{{product.name}}
                     <label>Description:</label>{{product.description}}
                     <label>Price:</label>{{product.listPrice}}
                     <label>Quantity In Stock:</label>{{product.quantityInStock}}
+                    <p></p>
+                    <label>Enter amount to purchase:</label><input type="number" v-model="quantity"/>
+                    <button type="submit">Add To Cart</button>
                 </form>
-            <fieldset>
         </main>
         
         <script type="module" src="js/cart.js"></script>

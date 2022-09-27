@@ -26,13 +26,6 @@ public class Server extends Jooby {
 	}
 
 	public static void main(String[] args) {
-            // some dummy data for testing with
-            ProductDAO dao = DaoFactory.getProductDAO();
-            dao.saveProduct(new Product("WD420", "Product 1", "The First Product", "generic", new BigDecimal("3.20"), new BigDecimal(46)));
-            dao.saveProduct(new Product("XXX32", "Product 2", "The Second Product", "generic", new BigDecimal("4.30"), new BigDecimal(37)));
-            dao.saveProduct(new Product("77713", "Product 3", "The Third Product", "generic", new BigDecimal("5.60"), new BigDecimal(12)));
-            dao.saveProduct(new Product("abc45", "Ball", "A sphere of air.", "Sports", new BigDecimal("59.99"), new BigDecimal(114)));
-
             
 		System.out.println("\nStarting Server.");
 		new Server().start();

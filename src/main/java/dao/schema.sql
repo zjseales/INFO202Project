@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS CUSTOMER (
 );
 
 CREATE TABLE IF NOT EXISTS PRODUCT (
-	Product_ID INTEGER AUTO_INCREMENT (1000),
+	Product_ID varchar(20) unique,
 	Name varchar(50) not null,
         Description varchar(200),
         Category varchar(20) not null,

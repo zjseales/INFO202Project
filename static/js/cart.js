@@ -20,7 +20,6 @@ const app = Vue.createApp({
     data() {
         return {
             // models (comma separated key/value pairs)
-
         };
     },
 
@@ -39,7 +38,15 @@ const app = Vue.createApp({
 
     methods: {
         // comma separated function declarations
-
+        
+        // add item to cart
+        addToCart(product, quantity){
+            if (quantity <= product.quantityInStock && quantity > 0){
+                dataStore.commit("addItem", new SaleItem(product, quantity));
+            } else {
+                alert("Amount being purchased must be a positive number\nless than, or equal to, the Quantity of Stock");
+            }
+        }
     }
 
 });

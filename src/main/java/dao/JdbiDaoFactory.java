@@ -14,7 +14,7 @@ public class JdbiDaoFactory {
    private static final String DB_USERNAME = "sa";
    private static final String DB_PASSWORD = "sa";
 
-   private static String jdbcUri = "jdbc:h2:tcp://localhost/milestone1";
+   private static String jdbcUri = "jdbc:h2://localhost/milestone2";
 
    private static HikariDataSource HIKARI_DATA_SOURCE;
    private static Jdbi JDBI;

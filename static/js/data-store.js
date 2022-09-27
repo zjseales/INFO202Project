@@ -23,7 +23,12 @@ export const dataStore = Vuex.createStore({
         //user selects a product
         selectProduct(state, product){
             state.selectedProduct = product;
-        }
+        },
+        
+        // add item to cart
+        addItem(state, item) {
+            state.items.push(item);
+        },
 
     },
 
