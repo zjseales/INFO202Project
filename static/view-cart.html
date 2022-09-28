@@ -10,6 +10,8 @@
     <body>
         <main>
             <navmen></navmen>
+            
+            <h1 class="font1">Shopping Cart</h1>
            
             <table>
                 <thead>
@@ -18,16 +20,16 @@
                     <th>Quantity</th>
                     <th>Total</th>
                     </tr>
-         </thead>
-         <tbody>
-            <tr v-for="item in items">
-                <td>{{item.name}}</td>
-                <td>{{item.price}</td>
-                <td>{{item.quantity}}</td>
-                <td>{{item.total}}</td>
-            </tr>
-         </tbody>
-    </table>
+                </thead>
+                <tbody>
+                    <tr v-for="item in items">
+                        <td>{{item.product.name}}</td>
+                        <td>{{item.salePrice}}</td>
+                        <td>{{item.quantityPurchased}}</td>
+                        <td>{{item.total}}</td>
+                    </tr>
+                </tbody>
+            </table>
             
         </main>
         
