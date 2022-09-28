@@ -60,8 +60,23 @@ const app = Vue.createApp({
                 .catch(error => {
                     alert(error.response.data.message);
                 });
+        },
+        
+        // Retrieve total cost of this item multiplied my number
+        // being purchased.
+        getItemTotal(item) {
+            return item.salePrice * item.quantityPurchased;
+        },
+        
+        // Retrieve entire cart price total
+        getCartTotal(items){
+            var total = 0;
+            for (let i = 0; i < items.length; i++){
+                total += items[i].quantityPurchased * items[i].salePrice;
+            }
+            return total;
         }
-    }
+    },
 
 });
 

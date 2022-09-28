@@ -26,7 +26,12 @@
                         <td>{{item.product.name}}</td>
                         <td>{{item.salePrice}}</td>
                         <td>{{item.quantityPurchased}}</td>
-                        <td>{{item.total}}</td>
+                        <td>{{getItemTotal(item)}}</td>
+                    </tr>
+                    <tr>
+                        <td>Total Cost:</td>
+                        <td></td><td></td>
+                        <td>{{getCartTotal(items)}}</td>
                     </tr>
                 </tbody>
             </table>
