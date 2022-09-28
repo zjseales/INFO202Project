@@ -1,5 +1,7 @@
 "use strict";
 
+var salesApi = "/api/sales/"
+
 class SaleItem {
     constructor(product, quantityPurchased) {
         this.product = product;
@@ -32,8 +34,6 @@ const app = Vue.createApp({
 
     mounted() {
         // semicolon separated statements
-
-
     },
 
     methods: {
@@ -47,6 +47,19 @@ const app = Vue.createApp({
             } else {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
                 alert("Amount being purchased must be a positive number\nless than, or equal to, the Quantity of Stock");
             }
+        },
+        
+        // Finalize sale of cart items
+        checkOut() {
+            let sale = new Sale(this.customer, this.items);
+            axios.post(salesApi, sale)
+                .then(() => {
+                    dataStore.commit("clearItems");
+                    window.location = 'confirmation.html';
+                })
+                .catch(error => {
+                    alert(error.response.data.message);
+                });
         }
     }
 

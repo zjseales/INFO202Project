@@ -29,7 +29,11 @@ export const dataStore = Vuex.createStore({
         addItem(state, item) {
             state.items.push(item);
         },
-
+      
+        // clear cart items
+        clearItems(state) {
+            state.items = new Array();
+        }
     },
 
     // add session storage persistence
