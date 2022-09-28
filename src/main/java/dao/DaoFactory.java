@@ -25,4 +25,11 @@ public class DaoFactory {
         //return new ProductCollectionsDAO();
     }
     
+    /** Returns the SaleDAO object.
+     *@return The Sale DAO.
+     */
+    public static SaleDAO getSaleDAO(){
+        return JdbiDaoFactory.getSaleDAO();
+    }
+    
 }

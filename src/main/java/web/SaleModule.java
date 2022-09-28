@@ -1,8 +1,7 @@
 package web;
 
-import dao.CustomerDAO;
-import dao.ProductDAO;
-import domain.Customer;
+import dao.SaleDAO;
+import domain.Sale;
 import io.jooby.Jooby;
 import io.jooby.StatusCode;
 
@@ -13,12 +12,12 @@ import io.jooby.StatusCode;
  */
 public class SaleModule extends Jooby {
 
-    public SaleModule() {
+    public SaleModule(SaleDAO dao) {
         
-        // Create a new Customer and save to the dao
-        // (New account registration)
+        // Create a new Sale Object and save it in the api interface.
         post("/api/sales/", ctx -> {
-            // requires sales dao
+            Sale sale = ctx.body().to(Sale.class);
+            dao.save(sale);
             return ctx.send(StatusCode.CREATED);
         });
         

@@ -11,7 +11,7 @@ import java.util.HashSet;
 public class Sale {
 
 	private Integer saleId;
-	private LocalDateTime date;
+	private transient LocalDateTime date;
 	private Customer customer;
 	private String status;
 
