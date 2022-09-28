@@ -77,8 +77,13 @@ const app = Vue.createApp({
             return total;
         }
     },
+    
+    mixins:[NumberFormatter]
 
 });
+
+// import number formatter for currency display.
+import { NumberFormatter } from './number-formatter.js';
 
 // import the navigation menu
 import { navigationMenu } from './navigation-menu.js';

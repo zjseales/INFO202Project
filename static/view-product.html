@@ -18,8 +18,8 @@
                     <label>ID:</label>{{product.productId}}
                     <label>Name:</label>{{product.name}}
                     <label>Description:</label>{{product.description}}
-                    <label>Price:</label>{{product.listPrice}}
-                    <label>Quantity In Stock:</label>{{product.quantityInStock}}
+                    <label>Price:</label>{{formatCurrency(product.listPrice)}}
+                    <label>Quantity In Stock:</label>{{formatNumber(product.quantityInStock, 0)}}
                     <p></p>
                     <label>Enter amount to purchase:</label><input type="number" v-model="quantity"/>
                     <button type="submit">Add To Cart</button>

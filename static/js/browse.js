@@ -66,11 +66,12 @@ const app = Vue.createApp({
     },
 
     // other modules
-    mixins: []
+    mixins:[NumberFormatter]
 
 });
 
-// other component imports go here
+// import number formatter for currency display
+import { NumberFormatter } from './number-formatter.js';
 
 // import the navigation menu
 import { navigationMenu } from './navigation-menu.js';

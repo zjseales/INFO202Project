@@ -32,8 +32,8 @@
             <tr v-for="product in products">
                 <td>{{product.name}}</td>
                 <td>{{product.description}}</td>
-                <td>{{product.listPrice}}</td>
-                <td>{{product.quantityInStock}}</td>
+                <td>{{formatCurrency(product.listPrice)}}</td>
+                <td>{{formatNumber(product.quantityInStock, 0)}}</td>
                 
 		<td><form @click.prevent="buyProduct(product)"><button>Buy</button></form>
                 </td>

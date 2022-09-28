@@ -24,14 +24,14 @@
                 <tbody>
                     <tr v-for="item in items">
                         <td>{{item.product.name}}</td>
-                        <td>{{item.salePrice}}</td>
-                        <td>{{item.quantityPurchased}}</td>
-                        <td>{{getItemTotal(item)}}</td>
+                        <td>{{formatCurrency(item.salePrice)}}</td>
+                        <td>{{formatNumber(item.quantityPurchased, 0)}}</td>
+                        <td>{{formatCurrency(getItemTotal(item))}}</td>
                     </tr>
                     <tr>
                         <td>Total Cost:</td>
                         <td></td><td></td>
-                        <td>{{getCartTotal(items)}}</td>
+                        <td>{{formatCurrency(getCartTotal(items))}}</td>
                     </tr>
                 </tbody>
             </table>
