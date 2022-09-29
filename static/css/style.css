@@ -12,31 +12,68 @@ main {
 }
 
 main .backImage{
-    margin: -40px 0px 0px 0px;
-    padding-top: 25px;
+    margin: auto;
+    margin-top: -15px;
     background-image: url("blue.png");
     background-size: 735px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center top;
 }
 
 /* page headings */
 h1 {
+    width: 705px;
+    margin: auto;
+    background-position: center;
     text-align: center;
     padding: 10px;
+    border: double;
+    border-color: red;
 }
 
 .font1 {
     font-family: Arial, Helvetica, serif;
+    color: white;
 }
 
+.font2 {
+    font-family: Brush Script, Helvetica, serif;
+    font-style: italic;
+    color: white;
+    font-size: 18px;
+    background-color: black;
+}
+
+.font3 {
+    font-family: Brush Script, Helvetica, serif;
+    font-style: italic;
+    color: red;
+    font-size: 16px;
+}
+
+.font4 {
+    font-family: Arial, Helvetica, serif;
+    color: white;
+    background-color: black;
+    font-size: 32px
+}
+
+.font6 {
+    padding-top: 10px;
+    font-family: Brush Script, Helvetica, serif;
+    font-style: italic;
+    color: white;
+    font-size: 18px;
+}
 /* nav links */
 nav a {
-    border:solid;
+    border: double;
     padding: 5px;
     margin: 5px;
-    text-decoration: none;
-    border-radius: 10px;
+    background-color: black;
+    border-color: red;
+    text-decoration: white;
+    border-radius: 0px;
 }
 
 header .logo a {
@@ -54,11 +91,12 @@ header .logo a {
 
 nav {
     text-align: center;
+    padding-top: 1px;
 }
 
 /* tables */
 table {
-    margin: 20px;
+    width: 729px;
     margin-left: auto;
     margin-right: auto;
     border-spacing: 0px 0px;
@@ -78,6 +116,12 @@ form {
     display: grid;
     grid-template-columns: max-content 1fr;
     grid-gap: 1em 0.5em;
+}
+
+fieldset {
+    width: 700px;
+    margin: auto;
+    border-color: red;
 }
 
 label {

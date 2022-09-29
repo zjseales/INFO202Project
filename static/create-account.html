@@ -10,28 +10,32 @@
     </head>
 	<body>
             <main>
+                <ul>
+                <li class="backImage">
                 <navmen></navmen>
                         
-                <h1 class="font1">Create a new account</h1>
+                <h1 class="font4">Account Registration</h1>
+                <p></p>
 
 		<fieldset>
 
-		<legend>Customer Details</legend>
+		<legend class="font3">Customer Details</legend>
 
 		<form @submit.prevent="createAccount()">
-                    <label>First Name:</label><input type="text" v-model="customer.firstName"/>
-                    <label>Surname:</label><input type="text" v-model="customer.surname"/>
-                    <label>Username:</label><input type="text" v-model="customer.username"/>
-                    <label>Password:</label><input type="password" v-model="customer.password"/>
-                    <label>Email Address:</label><input type="email" v-model="customer.emailAddress"/>
-                    <label>Shipping Address:</label><textarea type="text" v-model="customer.shippingAddress"></textarea>    
+                    <label class="font1">First Name:</label><input type="text" v-model="customer.firstName"/>
+                    <label class="font1">Surname:</label><input type="text" v-model="customer.surname"/>
+                    <label class="font1">Username:</label><input type="text" v-model="customer.username"/>
+                    <label class="font1">Password:</label><input type="password" v-model="customer.password"/>
+                    <label class="font1">Email Address:</label><input type="email" v-model="customer.emailAddress"/>
+                    <label class="font1">Shipping Address:</label><textarea type="text" v-model="customer.shippingAddress"></textarea>    
             
-                    <button type="submit">Create Account</button>
+                    <button class="font2" type="submit">Create Account</button>
 		</form>
 
 		</fieldset>
 
-            <a class="nav" href="index.html">Back to Home</a>
+            <p class="nav"><a class="font3" href="index.html">Back to Home</a></p>
+            </li></ul>
 
         </main>
             
