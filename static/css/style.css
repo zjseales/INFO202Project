@@ -1,7 +1,23 @@
 /* centre the main content area */
 main {
-    max-width: 729px;
+    padding-top: 2px;
+    max-width: 100%;
+    background-color: orange;
+    background-image: url("trippy.png");
     margin: auto;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    
+}
+
+main .backImage{
+    margin: -40px 0px 0px 0px;
+    padding-top: 25px;
+    background-image: url("blue.png");
+    background-size: 735px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* page headings */
@@ -21,6 +37,19 @@ nav a {
     margin: 5px;
     text-decoration: none;
     border-radius: 10px;
+}
+
+header .logo a {
+    background-color: black;
+    background-image: url("logo.png");
+    object-position: center top;
+    background-repeat: no-repeat;
+    background-size: 729px;
+    display: inline-block;
+    width: 729px;
+    height: 150px;
+    margin: 0px 0px 0px -40px;
+    background-position-y: -90px;
 }
 
 nav {
