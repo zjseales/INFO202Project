@@ -17,7 +17,7 @@
             <p></p>
             
                 <fieldset>
-                    <legend class="font3">Product Details</legend>
+                    <legend class="font3">Purchase Details</legend>
                     
                 <form class="font7" @submit.prevent="addToCart(product, quantity)">
                     <label class="font6">ID:</label>{{product.productId}}
@@ -25,11 +25,12 @@
                     <label class="font6">Description:</label>{{product.description}}
                     <label class="font6">Price:</label>{{formatCurrency(product.listPrice)}}
                     <label class="font6">Quantity In Stock:</label>{{formatNumber(product.quantityInStock, 0)}}
-                </form>
-                </fieldset>
-                <p></p>
+                
+                    <p></p>
                     <label class="font6">Enter amount to purchase:  </label><input type="number" v-model="quantity"/>
                     <button class="font2" type="submit">Add To Cart</button>
+                    </form>
+                </fieldset>
                     
             <p></p>
             <p class="nav"><a class="font3"  href="browse.html">Back to Store</a>
