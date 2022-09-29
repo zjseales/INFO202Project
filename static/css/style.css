@@ -58,11 +58,23 @@ h1 {
     font-size: 32px
 }
 
+.font5 {
+    font-family: Brush Script, Helvetica, serif;
+    color: white;
+    font-size: 18px;
+    background-color: black;
+}
+
 .font6 {
-    padding-top: 10px;
     font-family: Brush Script, Helvetica, serif;
     font-style: italic;
     color: white;
+    font-size: 18px;
+}
+
+.font7 {
+    font-family: Brush Script, Helvetica, serif;
+    color: red;
     font-size: 18px;
 }
 /* nav links */
@@ -100,6 +112,10 @@ table {
     margin-left: auto;
     margin-right: auto;
     border-spacing: 0px 0px;
+    border: double;
+    border-color: red;
+    color: red;
+    background-color: black;
 }
 
 td, th {
@@ -115,13 +131,14 @@ td, th {
 form {
     display: grid;
     grid-template-columns: max-content 1fr;
-    grid-gap: 1em 0.5em;
+    grid-gap: 1em 1em;
 }
 
 fieldset {
     width: 700px;
     margin: auto;
     border-color: red;
+    background-color: black;
 }
 
 label {

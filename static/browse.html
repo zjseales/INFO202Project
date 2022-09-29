@@ -11,21 +11,24 @@
     
     <body>
         <main>
+           <ul><li class="backImage">
            <navmen></navmen>
                         
-            <h1 class="font1">Products</h1>
+            <h1 class="font4">Products</h1>
+            <p></p>
             
-            <div class = "categories">
-                <button @click.prevent="getProducts()">All</button>
-                <button @click.prevent="filterByCategory(category)" v-for="category in categories">{{category}}</button>
+            <div class="categories">
+                <button class="font2" @click.prevent="getProducts()">All</button>
+                <button class="font2" @click.prevent="filterByCategory(category)" v-for="category in categories">{{category}}</button>
             </div>
+            <p></p>
             
             <table>
          <thead>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                    <th>Available</th>
+                    <th class="font6">Name</th>
+                    <th class="font6">Description</th>
+                    <th class="font6">Price</th>
+                    <th class="font6">Available</th>
               </tr>
          </thead>
          <tbody>
@@ -35,13 +38,14 @@
                 <td>{{formatCurrency(product.listPrice)}}</td>
                 <td>{{formatNumber(product.quantityInStock, 0)}}</td>
                 
-		<td><form @click.prevent="buyProduct(product)"><button>Buy</button></form>
+		<td><form @click.prevent="buyProduct(product)"><button class="font2">Buy</button></form>
                 </td>
             </tr>
          </tbody>
     </table>
 
-    <a class="nav" href="index.html">Return to home</a>
+    <p class="nav"><a class="font3" href="index.html">Return to home</a></p>
+    </li></ul>
             
         </main>
         
