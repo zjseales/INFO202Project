@@ -49,6 +49,7 @@ h1 {
     font-style: italic;
     color: red;
     font-size: 16px;
+    padding-left: 15px;
 }
 
 .font4 {
@@ -76,6 +77,12 @@ h1 {
     font-family: Brush Script, Helvetica, serif;
     color: red;
     font-size: 18px;
+}
+.font8 {
+    font-family: Arial, Helvetica, serif;
+    color: white;
+    background-color: black;
+    font-size: 24px
 }
 /* nav links */
 nav a {
@@ -123,6 +130,7 @@ td, th {
     border-width: 0px 0px 1px 0px;
     border-style: solid;
     padding: 5px;
+    text-align: center;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -158,6 +166,12 @@ textarea {
 /* colours */
 th, a.nav, legend, label {
     color: darkslategray;
+}
+
+.checkoutLayout button {
+    width: 100px;
+    margin: auto;
+    background-position: center;
 }
 
 h1, button {

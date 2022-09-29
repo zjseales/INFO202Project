@@ -9,36 +9,43 @@
     </head>
     <body>
         <main>
+            <ul><li class="backImage">
             <navmen></navmen>
             
-            <h1 class="font1">Shopping Cart</h1>
+            <h1 class="font4">Shopping Cart</h1>
+            <p></p>
            
             <table>
                 <thead>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Total</th>
+                    <th class="font6">Name</th>
+                    <th class="font6">Price</th>
+                    <th class="font6">Quantity</th>
+                    <th class="font6">Total</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="item in items">
-                        <td>{{item.product.name}}</td>
-                        <td>{{formatCurrency(item.salePrice)}}</td>
-                        <td>{{formatNumber(item.quantityPurchased, 0)}}</td>
-                        <td>{{formatCurrency(getItemTotal(item))}}</td>
+                        <td class="font7">{{item.product.name}}</td>
+                        <td class="font7">{{formatCurrency(item.salePrice)}}</td>
+                        <td class="font7">{{formatNumber(item.quantityPurchased, 0)}}</td>
+                        <td class="font7">{{formatCurrency(getItemTotal(item))}}</td>
                     </tr>
                     <tr>
-                        <td>Total Cost:</td>
+                        <td class="font8">Total Cost:</td>
                         <td></td><td></td>
-                        <td>{{formatCurrency(getCartTotal(items))}}</td>
+                        <td class="font8">{{formatCurrency(getCartTotal(items))}}</td>
                     </tr>
                 </tbody>
             </table>
+            <p></p>
             
-            <form @submit.prevent="checkOut()"><button>Check Out</button></form>
+            <form class="checkoutLayout" @submit.prevent="checkOut()">
+                <button class="font2">Check Out</button>
+            </form>
             
-            <a class="nav" href="browse.html">Back to Store</a>
+            <p class="nav"><a class="font3" href="browse.html">Back to Store</a>
+            
+            </li></ul>
         </main>
         
         <script type="module" src="js/cart.js"></script>
