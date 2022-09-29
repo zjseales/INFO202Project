@@ -11,25 +11,29 @@
     
     <body>
         <main>
+            <ul><li class="backImage">
             <navmen></navmen>
             
-            <h1 class="font1">Sign In</h1>
+            <h1 class="font4">Sign In</h1>
+            <p></p>
             
             <fieldset>
-			<legend>Enter Login details</legend>
+			<legend class="font3">Enter Login details</legend>
 
 			<form @submit.prevent="login(username)">
                                        
-                            <label>Username:</label><input type="text" v-model="username"/>
-                            <label>Password:</label><input type="password" v-model="password"/>
+                            <label class="font1">Username:</label><input type="text" v-model="username"/>
+                            <label class="font1">Password:</label><input type="password" v-model="password"/>
             
-                            <button type="submit">Sign-in</button>
+                            <button class="font2" type="submit">Sign-in</button>
 
 			</form>
 
             </fieldset>
             
-            <a class="nav" href="index.html">Back to Home</a>
+            <p class="nav"><a class="font3" href="index.html">Back to Home</a>
+            
+        </li></ul>
 
         </main>
         
